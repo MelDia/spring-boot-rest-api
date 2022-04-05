@@ -1,0 +1,9 @@
+[{"id_movie":1, "movie_name":"Batman", "release_date":"1966 ", "director":"Leslie H. Martinson", "protagonist":"Adam West"},
+ {"id_movie":2, "movie_name":"Batman", "release_date":"1989", "director":"Tim Burton", "protagonist":"Michael Keaton "},
+ {"id_movie":3, "movie_name":"Batman Returns", "release_date":"1992", "director":"Tim Burton", "protagonist":"Michael Keaton "},
+ {"id_movie":4, "movie_name":"Batman Forever", "release_date":"1995", "director":"Joel Schumacher", "protagonist":"Val Kilmer"},
+ {"id_movie":5, "movie_name":"Batman y Robin", "release_date":"1997", "director":"Joel Schumacher", "protagonist":"George Clooney,"},
+ {"id_movie":6, "movie_name":"Batman Begins", "release_date":"2005", "director":"Christopher Nolan", "protagonist":"Christian Bale "},
+ {"id_movie":7, "movie_name":"The Dark Knight", "release_date":"2008", "director":"Christopher Nolan", "protagonist":"Christian Bale "},
+ {"id_movie":8, "movie_name":"The Dark Knight Rises", "release_date":"2010", "director":"Christopher Nolan", "protagonist":"Christian Bale "},
+ {"id_movie":9, "movie_name":"The Batman", "release_date":"2022", "director":"Matt Reeves", "protagonist":"Robert Pattinson "}]
