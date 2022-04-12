@@ -27,7 +27,7 @@ public class BatmanResponse {
         }
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         
-        jsonObj.put("list of movies", listMovies);
+        jsonObj.put("movies", listMovies);
         jsonObj.put("status", HttpStatus.OK.value());
         jsonObj.put("message", "The Batman filmography list was successfully found!");
         LogManager.getLogger().info("Response = list all movies -> " + jsonObj);
@@ -57,10 +57,10 @@ public class BatmanResponse {
         JSONObject jsonObj = new JSONObject();
         
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        if (!(batman.getMovie_name() == null) 
-                || !(batman.getRelease_date() == null) 
-                || !(batman.getDirector() == null)
-                || !(batman.getProtagonist() == null)) {
+        if (batman.getMovie_name() == null 
+                || batman.getRelease_date() == null 
+                || batman.getDirector() == null
+                || batman.getProtagonist() == null) {
             return BatmanBadResponse.ExceptionResponse(jsonObj, HttpStatus.BAD_REQUEST, new ExceptionCustom().nullAttributteException());
         }
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -77,7 +77,7 @@ public class BatmanResponse {
     public static String responseDeleteMovie(Integer id, BatmanService batmanServ) {
         BatmanRequest batReq = new BatmanRequest();
         batReq.setId_movie(id);
-        Optional<Batman> deleteMovie = batmanServ.searchMovieById(batReq);
+        Optional<Batman> deleteMovie = batmanServ.searchMovieById(id);
         JSONObject jsonObj = new JSONObject();
         
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

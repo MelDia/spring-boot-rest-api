@@ -19,8 +19,8 @@ public class BatmanService {
         return batmanDao.findAll();
     }
 
-    public Optional<Batman> searchMovieById(BatmanRequest batReq) {
-        return batmanDao.findById(batReq.getId_movie());
+    public Optional<Batman> searchMovieById(Integer batReq) {
+        return batmanDao.findById(batReq);
     }
 
     public Optional<Batman> searchMovieToModify(BatmanModification batMod) {

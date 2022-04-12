@@ -8,8 +8,7 @@ import com.MelDia.BatmanAPI.service.BatmanService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -29,8 +28,8 @@ public class BatmanControl {
     }
     
     //Find movie by id
-    @RequestMapping(value = "/search/id", produces = "application/json", consumes = "application/json", method = RequestMethod.GET)
-    public String findMovieById(@RequestBody BatmanRequest batReq) throws JsonProcessingException{
+    @RequestMapping(value = "/search/{id_movie}", produces = "application/json", method = RequestMethod.GET)
+    public String findMovieById(@PathVariable ("id_movie") Integer batReq) throws JsonProcessingException{
         Optional<Batman> batman = batmanServ.searchMovieById(batReq);
         return BatmanResponse.responseFindById(batman);	
     }
